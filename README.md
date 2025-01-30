@@ -12,12 +12,13 @@ Dette er et fullstack-prosjekt som bruker Docker for å containerisere en .NET A
    cd my-dockerized-app
 
 
-2. **Bygg og start Docker-containere**
-   ```sh
-   docker compose up --build -d
+2.	Bygg og start Docker-containere
 
-3. **Åpne nettleseren og gå til**  
-   [http://localhost/](http://localhost/)
+ docker compose up --build -d
+
+3.	Åpne nettleseren og gå til
+
+http://localhost/
 
 ## 🛠 **Teknologi brukt**
 - 🚀 **.NET 8 API** – Backend for tjenesten  
@@ -25,39 +26,33 @@ Dette er et fullstack-prosjekt som bruker Docker for å containerisere en .NET A
 - 🌐 **Nginx** – Reverse proxy for API-et  
 - 🐳 **Docker & Docker Compose** – Container management   
 
-## 🐳 **Docker Hub Images**
+🐳 Docker Hub Images
+
 Bildene er lastet opp til Docker Hub og kan lastes ned med:
-```sh
+
 docker pull b10abd/dotnet-api
 docker pull b10abd/nginx
 docker pull b10abd/mysql
 
-## ❓ **Feilsøking**
 
-### **Får du en “502 Bad Gateway” feil?**
-  - Kjør følgende kommando for å sjekke om Nginx fungerer:
-  ```sh
-  docker logs nginx_proxy
-  - Kjør følgende kommando for å se om Nginx fungerer:
-  ```sh
-  docker logs nginx_proxy
-  - Sjekk at API-et kjører med:
-  ```sh
-  docker logs dotnet_api
-   ### **Databaseproblemer?**
-  - Kjør følgende kommando for å se MySQL-loggene:
-  ```sh
-  docker logs mysql_db
-  - Prøv å kjøre følgende kommando for å få tilgang til databasen:
-  ```sh
-  docker exec -it mysql_db mysql -u root -p
+❓ Feilsøking
+
+    Får du en “502 Bad Gateway” feil?
+	•	Kjør følgende kommando for å sjekke om Nginx :
+    docker logs nginx_proxy
+	•	Sjekk at API-et kjører med:
+    docker logs dotnet_api
+    Databaseproblemer?
+	•	Kjør følgende kommando for å se MySQL-loggene:
+    docker logs mysql_db
+    •	Prøv å kjøre følgende kommando for å få tilgang til databasen:
+    docker exec -it mysql_db mysql -u root -p
 
 
-### **Vil du starte containere på nytt?**
+Vil du starte containere på nytt?
 Kjør følgende kommandoer:
-```sh
 docker compose down -v
 docker compose up --build -d
 
-## 🔗 **Lenker**
-- **Docker Hub:** [https://hub.docker.com/u/b10abd](https://hub.docker.com/u/b10abd)
+🔗 Lenker
+	•	Docker Hub: https://hub.docker.com/u/b10abd
