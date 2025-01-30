@@ -8,7 +8,7 @@ Dette er et fullstack-prosjekt som bruker Docker for å containerisere en .NET A
 
 1. **Klon repoet**
    ```sh
-   git clone https://github.com/b10abd/my-dockerized-app.git
+   git clone https://github.com/babdb10/my-dockerized-app
    cd my-dockerized-app
 
 
