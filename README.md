@@ -40,6 +40,7 @@ docker pull b10abd/mysql
 ❓ Feilsøking
 
 Får du en “502 Bad Gateway” feil?
+
 •	Kjør følgende kommando for å sjekke om Nginx :
 
 docker logs nginx_proxy
@@ -49,6 +50,7 @@ docker logs nginx_proxy
 docker logs dotnet_api
 
 Databaseproblemer?
+
 •	Kjør følgende kommando for å se MySQL-loggene:
 
 docker logs mysql_db
