@@ -41,23 +41,23 @@ docker pull b10abd/mysql
 
 Får du en “502 Bad Gateway” feil?
 
-•	Kjør følgende kommando for å sjekke om Nginx :
+  •	Kjør følgende kommando for å sjekke om Nginx :
 
-docker logs nginx_proxy
+   docker logs nginx_proxy
 
-•	Sjekk at API-et kjører med:
+  •	Sjekk at API-et kjører med:
 
-docker logs dotnet_api
+   docker logs dotnet_api
 
 Databaseproblemer?
 
-•	Kjør følgende kommando for å se MySQL-loggene:
+  •	Kjør følgende kommando for å se MySQL-loggene:
 
-docker logs mysql_db
+   docker logs mysql_db
 
-•	Prøv å kjøre følgende kommando for å få tilgang til databasen:
+  •	Prøv å kjøre følgende kommando for å få tilgang til databasen:
 
-docker exec -it mysql_db mysql -u root -p
+   docker exec -it mysql_db mysql -u root -p
 
 
 🔗 Lenker
