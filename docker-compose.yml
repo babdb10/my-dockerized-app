@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx_proxy
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    networks:
+      - app_network
+
+  api:
+    build: ./api
+    container_name: dotnet_api
+    environment:
+      - ASPNETCORE_URLS=http://+:8080  # 👈 Sikrer at API-et lytter på riktig port
+      - ConnectionStrings__DefaultConnection=Server=mysql;Database=appdb;User=root;Password=rootpassword;
+    depends_on:
+      - mysql
+    networks:
+      - app_network
+
+  mysql:
+    build: ./mysql
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: appdb
+    ports:
+      - "3306:3306"  # åpner MySQL for testing 
+    networks:
+      - app_network
+    volumes:
+      - db_data:/var/lib/mysql
+
+networks:
+  app_network:
+
+volumes:
+  db_data:
