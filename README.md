@@ -53,6 +53,7 @@ docker exec -it mysql_db mysql -u root -p
 
 
 🔗 Lenker
-	•	Docker Hub: https://hub.docker.com/u/b10abd
+	
+   •	Docker Hub: https://hub.docker.com/u/b10abd
    
    •	GitHub Repo: https://github.com/babdb10/my-dockerized-app
