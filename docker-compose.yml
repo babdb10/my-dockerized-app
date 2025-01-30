@@ -15,8 +15,10 @@ services:
     build: ./api
     container_name: dotnet_api
     environment:
-      - ASPNETCORE_URLS=http://+:8080  # 👈 Sikrer at API-et lytter på riktig port
+      - ASPNETCORE_URLS=http://+:8080  
       - ConnectionStrings__DefaultConnection=Server=mysql;Database=appdb;User=root;Password=rootpassword;
+    ports:
+      - "8080:8080"  # 👈 Legg til denne linjen!
     depends_on:
       - mysql
     networks:

@@ -18,7 +18,7 @@ Dette er et fullstack-prosjekt som bruker Docker for å containerisere en .NET A
 
 3.	Åpne nettleseren og gå til
 
-http://localhost/
+http://localhost:8080/
 
 ## 🛠 **Teknologi brukt**
 - 🚀 **.NET 8 API** – Backend for tjenesten  
@@ -54,3 +54,4 @@ docker exec -it mysql_db mysql -u root -p
 
 🔗 Lenker
 	•	Docker Hub: https://hub.docker.com/u/b10abd
+    •	GitHub Repo: https://github.com/babdb10/my-dockerized-app
